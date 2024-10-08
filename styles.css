@@ -1,4 +1,6 @@
-
+body {
+    background-color: #a9cfd9;
+}
 
 .container {
     background-image: url(images/fish.gif);
@@ -14,9 +16,24 @@
     
 }
 
+.backbutton {
+    background-image: url(images/backbutton.png);
+    height:50px;
+    width:50px;
+    display: inline-block;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 h1 {
     text-align: center;
     font-family: Georgia;
+    margin-top: 80px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
 }
 
 .button-container {
@@ -35,6 +52,17 @@ h1 {
 
 }
 
+.button:hover {
+    background-color:#7db2b8;
+    color: white;
+}
+
+.start-container {
+    text-align: center;
+    margin-top: 30px;
+ 
+}
+
 
 .start-button {
  color: red;
@@ -49,4 +77,15 @@ h1 {
 .start-button:hover {
     background-color: red;
   color: white;
+}
+
+.rules-container {
+    background-color: #8fcaca;
+    height: auto;
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
 }
