@@ -1,1 +1,52 @@
+
+
+.container {
+    background-image: url(images/fish.gif);
+    background-color: #FFFFC5;
+    height: 330px;
+    width: 450px;
+    margin: 0 auto;
+    margin-top: 165px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
     
+}
+
+h1 {
+    text-align: center;
+    font-family: Georgia;
+}
+
+.button-container {
+    display: flex; 
+    justify-content: space-around; 
+    margin-bottom: 30px; 
+}    
+
+
+.button {
+    font-size: 20px;
+    color:#7db2b8;
+    border-color: #7db2b8;
+    border-radius: 5px;
+    background-color: white;
+
+}
+
+
+.start-button {
+ color: red;
+ font-size: 50px;
+ background-color: white;
+ text-align: center;
+ border-color: red;
+ border-radius: 5px;
+ 
+}
+
+.start-button:hover {
+    background-color: red;
+  color: white;
+}
