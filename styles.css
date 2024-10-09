@@ -12,8 +12,6 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-
 }
 
 .backbutton {
@@ -104,6 +102,19 @@ h2 {
     font-style: italic;
 }
 
-.credit-title,.credit-names { 
+.credit-title,
+.credit-names {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.credit-container {
+    background-image: url(images/fish.gif);
+    background-color: #FFFFC5;
+    height: 330px;
+    width: 450px;
+    margin: 0 auto;
+    margin-top: 165px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
