@@ -1,120 +1,214 @@
 body {
-    background-color: #a9cfd9;
+  background-color: #a9cfd9;
 }
 
 .container {
-    background-image: url(images/fish.gif);
-    background-color: #FFFFC5;
-    height: 330px;
-    width: 450px;
-    margin: 0 auto;
-    margin-top: 165px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-image: url(images/fish.gif);
+  background-color: #ffffc5;
+  height: 330px;
+  width: 450px;
+  margin: 0 auto;
+  margin-top: 165px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .backbutton {
-    background-image: url(images/backbutton.png);
-    height: 50px;
-    width: 50px;
-    display: inline-block;
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-image: url(images/backbutton.png);
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 h1 {
-    text-align: center;
-    font-family: Georgia;
-    margin-top: 80px;
+  text-align: center;
+  font-family: Georgia;
+  margin-top: 80px;
 }
 
 h2 {
-    text-align: center;
-    font-size: 30px;
+  text-align: center;
+  font-size: 30px;
 }
 
 .button-container {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 30px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
 }
 
-
 .button {
-    font-size: 20px;
-    color: #7db2b8;
-    border-color: #7db2b8;
-    border-radius: 5px;
-    background-color: white;
-
+  font-size: 20px;
+  color: #7db2b8;
+  border-color: #7db2b8;
+  border-radius: 5px;
+  background-color: white;
 }
 
 .button:hover {
-    background-color: #7db2b8;
-    color: white;
+  background-color: #7db2b8;
+  color: white;
 }
 
 .start-container {
-    text-align: center;
-    margin-top: 30px;
-
+  text-align: center;
+  margin-top: 30px;
 }
 
-
 .start-button {
-    color: red;
-    font-size: 50px;
-    background-color: white;
-    text-align: center;
-    border-color: red;
-    border-radius: 5px;
-
+  color: red;
+  font-size: 50px;
+  background-color: white;
+  text-align: center;
+  border-color: red;
+  border-radius: 5px;
 }
 
 .start-button:hover {
-    background-color: red;
-    color: white;
+  background-color: red;
+  color: white;
 }
 
 .rules-container {
-    background-color: #8fcaca;
-    height: auto;
-    width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
+  background-color: #8fcaca;
+  height: auto;
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .credit-title {
-    font-size: 60px;
-    position: relative;
-    top: -30px;
-    margin-top: 10px;
+  font-size: 60px;
+  position: relative;
+  top: -30px;
+  margin-top: 10px;
 }
 
 .credit-names {
-    font-size: 40px;
-    text-align: center;
-    font-weight: bold;
-    font-style: italic;
+  font-size: 40px;
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
 }
 
 .credit-title,
 .credit-names {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .credit-container {
-    background-image: url(images/fish.gif);
-    background-color: #FFFFC5;
-    height: 330px;
-    width: 450px;
-    margin: 0 auto;
-    margin-top: 165px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-image: url(images/fish.gif);
+  background-color: #ffffc5;
+  height: 330px;
+  width: 450px;
+  margin: 0 auto;
+  margin-top: 165px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* gamescreen styling */
+.gamescreen-body {
+  background-color: #8bc34a;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.game-board {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+  border: 2px solid black;
+  padding: 20px;
+  background-color: #a8d08d;
+}
+
+.player,
+.opponent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.player {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+}
+
+.opponent {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+}
+
+.card-hand {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.card {
+  width: 50px;
+  height: 75px;
+  background-color: #b3d9ff;
+  border: 1px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  font-size: 18px;
+}
+
+.turn-indicator {
+  width: 200px;
+  height: 40px;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-size: 30px;
+}
+
+.ask-button {
+  background-color: #b19cd9;
+  padding: 10px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: bold;
+  width: 100px;
+}
+
+.ask-button:hover {
+  background-color: #8f7dcb;
+}
+
+.go-fish {
+  background-color: #ffcc00;
+  padding: 10px;
+  margin: 10px;
+  font-weight: bold;
+  border: 1px solid #ff9900;
+  display: none;
+}
+
+.face {
+  font-size: 48px;
 }
