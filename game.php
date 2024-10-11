@@ -23,11 +23,13 @@ function generateHand()
 }
 
 // get the player's hand
-$playerHand = generateHand();
+$playerHand = isset($_POST['deal']) ? generateHand() : [];
+
 ?>
 
-<ul>
+
+<?php if (!empty($playerHand)): ?>
     <?php foreach ($playerHand as $card): ?>
-        <li class="card"><?php echo $card; ?></li>
+        <div class="card"><?php echo $card; ?></div>
     <?php endforeach; ?>
-</ul>
+<?php endif; ?>
