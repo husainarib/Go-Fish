@@ -24,3 +24,10 @@ function generateHand()
 
 // get the player's hand
 $playerHand = generateHand();
+?>
+
+<ul>
+    <?php foreach ($playerHand as $card): ?>
+        <li class="card"><?php echo $card; ?></li>
+    <?php endforeach; ?>
+</ul>

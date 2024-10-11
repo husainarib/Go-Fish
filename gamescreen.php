@@ -8,11 +8,12 @@
   </head>
   <body class="gamescreen-body">
     <div class="game-board">
-        <!-- Checkbox to control the "Deal" button -->
-        <input type="checkbox" id="deal-toggle" class="deal-toggle" />
-  
-        <!-- Label acting as "Deal" button -->
-        <label for="deal-toggle" class="deal-button">Deal</label>
+      <!-- Checkbox to control the "Deal" button -->
+      <input type="checkbox" id="deal-toggle" class="deal-toggle" />
+
+      <!-- Label acting as "Deal" button -->
+      <label for="deal-toggle" class="deal-button">Deal</label>
+
       <!-- Opponent Section -->
       <div class="opponent">
         <div class="name-label">Billy</div>
@@ -28,7 +29,7 @@
         <div class="name-label">You</div>
         <div class="face">😊</div>
         <div class="card-hand" id="player-cards">
-          <!-- TODO implement user's cards -->
+          <?php include 'game.php'; ?>
         </div>
         <button class="ask-button" id="ask-button">Ask</button>
       </div>
