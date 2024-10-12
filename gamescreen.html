@@ -6,6 +6,7 @@
     <title>Go Fish Game</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body class="gamescreen-body">
     <div class="game-board">
       <!-- Checkbox to control the "Deal" button -->
@@ -20,7 +21,11 @@
         <div class="turn-indicator">Your turn</div>
         <div class="face">😊</div>
         <div class="card-hand" id="opponent-cards">
-          <!-- TODO Implement Opponent Cards -->
+          <div class="card">?</div>
+          <div class="card">?</div>
+          <div class="card">?</div>
+          <div class="card">?</div>
+          <div class="card">?</div>
         </div>
       </div>
 
@@ -29,7 +34,11 @@
         <div class="name-label">You</div>
         <div class="face">😊</div>
         <div class="card-hand" id="player-cards">
-          <?php include 'game.php'; ?>
+          <div class="card">...</div>
+          <div class="card">...</div>
+          <div class="card">...</div>
+          <div class="card">...</div>
+          <div class="card">...</div>
         </div>
         <button class="ask-button" id="ask-button">Ask</button>
       </div>
