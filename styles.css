@@ -113,7 +113,6 @@ h2 {
 }
 
 .gamescreen-body {
-
   font-family: Arial, sans-serif;
   text-align: center;
 }
@@ -156,11 +155,10 @@ h2 {
   margin-top: 10px;
 }
 
-
 .card {
   width: 50px;
   height: 75px;
-  perspective: 1000px; 
+  perspective: 1000px;
   background-color: #b3d9ff;
   border: 1px solid #333;
   display: flex;
@@ -169,8 +167,6 @@ h2 {
   margin: 0 5px;
   font-size: 18px;
 }
-
-
 
 .turn-indicator {
   width: 200px;
@@ -187,10 +183,7 @@ h2 {
   position: absolute;
   top: 10px;
   left: 10px;
-
 }
-
-
 
 .ask-button {
   background-color: #b19cd9;
@@ -222,9 +215,9 @@ h2 {
 }
 
 .name-label {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-bottom: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .deal-toggle {
@@ -249,12 +242,40 @@ h2 {
   display: none;
 }
 
-
-#opponent-cards, #player-cards {
+#opponent-cards,
+#player-cards {
   display: none;
 }
 
 #deal-toggle:checked ~ .opponent .card-hand,
 #deal-toggle:checked ~ .player .card-hand {
   display: flex;
+}
+
+#deal-toggle:checked + .deal-button {
+  display: none;
+}
+
+.ask-text {
+  display: none;
+}
+
+#ask-toggle:checked ~ .ask-text {
+  display: block;
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+  background-color: lightgreen;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+  text-align: center;
+  display: inline-block;
+  width: auto;
+}
+
+#deal-toggle,
+#ask-toggle {
+  display: none;
 }
