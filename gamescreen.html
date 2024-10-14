@@ -19,6 +19,8 @@
         <!-- Opponent Section -->
         <div class="opponent">
             <div class="name-label">Billy</div>
+            <!-- response to first press of 'Ask' button -->
+            <div class="billy-ask-text">Yes I do!</div>
             <div class="face">😊</div>
             <div class="card-hand" id="opponent-cards">
                 <div class="card">
@@ -64,11 +66,14 @@
                     <div class="card-front5"></div>
                     <div class="card-back"></div>
                 </div>
+              </div>
+           <!-- Checkbox to control the "Ask" button -->
+          <input type="checkbox" id="ask-toggle" class="ask-toggle" />
+          <label for="ask-toggle" class="ask-button">Ask</label>
+          <!-- First Text after user taps "Ask" for the 1st time. -->
+          <div class="ask-text">Do you have a 2?</div>
             </div>
-            <!-- Ask button positioned to show only after clicking Deal -->
-            <button class="ask-button" id="ask-button" style="display: none;">Ask</button>
-        </div>
-    </div>
-  </body>
-</html>
+          </div>
+      </body>
+      </html>
 

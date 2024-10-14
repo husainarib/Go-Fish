@@ -318,3 +318,45 @@ h2 {
 #ask-toggle {
   display: none;
 }
+
+#ask-toggle:checked~.player .ask-text {
+  display: block;
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+  background-color: lightgreen;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+  text-align: center;
+}
+
+.billy-ask-text {
+  opacity: 0;
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+  background-color: lightblue;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+  text-align: center;
+  transition: opacity 0.5s ease-in;
+  animation: fadeIn 0.5s ease-in 1s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#ask-toggle:checked~.opponent .billy-ask-text {
+  display: block;
+}
