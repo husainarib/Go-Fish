@@ -72,7 +72,8 @@ h2 {
   color: white;
 }
 
-.rules-container {
+.rules-container,
+.credit-container {
   background-color: #8fcaca;
   height: auto;
   width: 500px;
@@ -101,19 +102,7 @@ h2 {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.credit-container {
-  background-color: #8fcaca;
-  height: 330px;
-  width: 450px;
-  margin: 0 auto;
-  margin-top: 165px;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
 .gamescreen-body {
-
   font-family: Arial, sans-serif;
   text-align: center;
 }
@@ -128,23 +117,29 @@ h2 {
   background-color: #00a000;
 }
 
-.player,
-.opponent {
-  display: flex;
+.player, .opponent {
+  display: none;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
+.spacing-before-deal {
+  margin-top: 100px; /* Adjust this value to lower the position */
+}
+
+.player .name-label, .opponent .name-label {
+  margin-top: 40px; /* Add some margin to the name label */
+}
+
 .player {
-  position: absolute;
   bottom: 20px;
   left: 0;
+  margin-top: 100px;
   width: 100%;
 }
 
 .opponent {
-  position: absolute;
   top: 20px;
   left: 0;
   width: 100%;
@@ -153,14 +148,14 @@ h2 {
 .card-hand {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 10px;
 }
-
 
 .card {
   width: 50px;
   height: 75px;
-  perspective: 1000px; 
+  perspective: 1000px;
   background-color: #b3d9ff;
   border: 1px solid #333;
   display: flex;
@@ -168,29 +163,60 @@ h2 {
   align-items: center;
   margin: 0 5px;
   font-size: 18px;
+  position: relative;
 }
 
+.card-front1 {
+  background-image: url('images/2_of_hearts.png');
+}
 
+.card-front2 {
+  background-image: url("images/jack_of_clubs2.png");
+}
+
+.card-front3 {
+  background-image: url('images/2_of_hearts.png');
+}
+
+.card-front4 {
+  background-image: url('images/5_of_diamonds.png');
+}
+
+.card-front5 {
+  background-image: url('images/9_of_spades.png');
+}
+
+.card-back {
+  background-image: url('images/back_of_card.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
 .turn-indicator {
-  width: 200px;
-  height: 40px;
-  background-color: red;
-  color: white;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  font-size: 30px;
-  position: absolute;
-  top: 10px;
-  left: 10px;
-
+  display: none;
+    width: 200px;
+    height: 40px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
 
-
+#deal-toggle:checked ~ .turn-indicator {
+  display: flex;
+}
 
 .ask-button {
   background-color: #b19cd9;
@@ -202,11 +228,13 @@ h2 {
   font-size: 30px;
   font-weight: bold;
   width: 100px;
+  display: none; 
 }
 
 .ask-button:hover {
   background-color: #8f7dcb;
 }
+
 
 .go-fish {
   background-color: #ffcc00;
@@ -217,14 +245,15 @@ h2 {
   display: none;
 }
 
+
 .face {
   font-size: 48px;
 }
 
 .name-label {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-bottom: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .deal-toggle {
@@ -246,15 +275,22 @@ h2 {
 }
 
 .deal-toggle:checked + .deal-button {
-  display: none;
+  display: none; 
 }
-
 
 #opponent-cards, #player-cards {
   display: none;
 }
 
+#deal-toggle:checked + .deal-button + .turn-indicator,
+#deal-toggle:checked ~ .opponent,
+#deal-toggle:checked ~ .player,
 #deal-toggle:checked ~ .opponent .card-hand,
-#deal-toggle:checked ~ .player .card-hand {
-  display: flex;
+#deal-toggle:checked ~ .player .card-hand,
+#deal-toggle:checked ~ .player .ask-button {
+  display: flex; 
 }
+
+
+
+
