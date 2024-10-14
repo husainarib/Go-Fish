@@ -291,6 +291,30 @@ h2 {
   display: flex; 
 }
 
+#deal-toggle:checked + .deal-button {
+  display: none;
+}
 
+.ask-text {
+  display: none;
+}
 
+#ask-toggle:checked ~ .ask-text {
+  display: block;
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+  background-color: lightgreen;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+  text-align: center;
+  display: inline-block;
+  width: auto;
+}
 
+#deal-toggle,
+#ask-toggle {
+  display: none;
+}
