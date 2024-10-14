@@ -110,7 +110,7 @@ h2 {
 .game-board {
   position: relative;
   width: 600px;
-  height: 600px;
+  height: auto;
   margin: 0 auto;
   border: 2px solid black;
   padding: 20px;
@@ -128,14 +128,14 @@ h2 {
   margin-top: 100px; /* Adjust this value to lower the position */
 }
 
-.player .name-label, .opponent .name-label {
-  margin-top: 40px; /* Add some margin to the name label */
+.name-label, .opponent .name-label {
+  margin-top: 10px; 
 }
 
 .player {
   bottom: 20px;
   left: 0;
-  margin-top: 100px;
+  margin-top: 60px;
   width: 100%;
 }
 
@@ -219,26 +219,50 @@ h2 {
 }
 
 .ask-button {
-  background-color: #b19cd9;
-  padding: 10px;
-  margin-top: 20px;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 30px;
-  font-weight: bold;
-  width: 100px;
-  display: none; 
+background-color: #b19cd9;
+padding: 10px;
+border: none;
+border-radius: 20px;
+cursor: pointer;
+font-size: 30px;
+font-weight: bold;
+display: inline-block;
+text-align: center;
+margin-right: 10px;
 }
 
 .ask-button:hover {
   background-color: #8f7dcb;
 }
 
+.ask-container {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.fish-container {
+  display: flex;
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: center; 
+  margin-top: 20px; 
+}
 
 .go-fish {
-  display: none;
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  background-image: url('images/go-fish.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+  animation: fadeIn 0.5s ease-in 1s forwards;
 }
+
 
 
 .face {
@@ -271,6 +295,7 @@ h2 {
 
 .deal-toggle:checked + .deal-button {
   display: none; 
+}
 .deal-toggle:checked+.deal-button {
   display: none;
 }
@@ -293,11 +318,7 @@ h2 {
 }
 
 .ask-text {
-  display: none;
-}
-
-#ask-toggle:checked~.ask-text {
-  display: block;
+  display: none; /* Initially hidden */
   font-size: 25px;
   font-weight: bold;
   color: black;
@@ -305,8 +326,14 @@ h2 {
   padding: 10px;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  margin-top: 10px;
+  margin-top: 10px; /* Space between button and text */
   text-align: center;
+}
+
+
+#ask-toggle:checked~.ask-text {
+  display: block;
+
 }
 
 #deal-toggle,
@@ -351,4 +378,10 @@ h2 {
   to {
     opacity: 1;
   }
+}
+
+#ask-toggle:checked~.opponent .billy-ask-text,
+#ask-toggle:checked~.opponent .go-fish {
+  display: block;
+
 }
